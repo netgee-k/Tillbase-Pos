@@ -27,7 +27,10 @@
 
 ---
 
-![Logo](tillbase1.png,tillbase2.png )
+<p float="left">
+  <img src="tillbase1.png" width="50%" />
+  <img src="tillbase2.png" width="50%" />
+</p>
 
 ## 📥 Installation Guide
 
