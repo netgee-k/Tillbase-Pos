@@ -2,7 +2,7 @@
 
 **Tillbase POS** is a modern, web-based Point of Sale (POS) system built for small and medium-sized businesses, including **pharmacies, retail shops, and service outlets**. It helps business owners and staff manage inventory, users, sales, and payments efficiently — all from a centralized interface.
 
-![Logo](logo2.png)
+![Logo](logo.png)
 
 ---
 
