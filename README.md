@@ -28,8 +28,11 @@
 ---
 
 
-  <img src="tillbase1.png" width="50%" />
-  <img src="tillbase2.png" width="50%" />
+<p float="left">
+  <img src="tillbase 1.png" width="45%" />
+  <img src="tillbase2.png" width="45%" />
+</p>
+
 
 
 ## 📥 Installation Guide
