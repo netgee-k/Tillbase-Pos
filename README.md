@@ -2,7 +2,7 @@
 
 Tillbase POS is a web-based Point of Sale (POS) system designed for small and medium-sized businesses,  pharmacies. It allows business owners, managers  and cashiers to manage  inventory, users, sales, and payments — all from a central interface.
 
-![Logo](LOGO.png)
+![Logo](logo2.png)
 
 ## Features
 
