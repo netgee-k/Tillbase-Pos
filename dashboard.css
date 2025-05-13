@@ -1,0 +1,315 @@
+/* Global & Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+  }
+  header {
+    background: #4CAF50;
+    padding: 10px 20px;
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .logo { width: 40px; margin-right: 15px; }
+  .top-nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity .2s;
+  }
+  .top-nav a:hover { opacity: .7; }
+  
+  main.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  /* Columns */
+  .column-left, .column-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Widgets */
+  .widget {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .widget h3 { margin-bottom: 10px; color: #4CAF50; }
+  
+  /* Search */
+  .widget input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  /* Inventory Table */
+  .med-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .med-table th, .med-table td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  .med-table thead {
+    background: #4CAF50;
+    color: white;
+  }
+  .med-table tr:nth-child(even) { background: #f9f9f9; }
+  
+  /* Sale Form */
+  .sale-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .sale-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+  }
+  .sale-form select, .sale-form input {
+    margin-top: 5px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: border-color .3s;
+  }
+  .sale-form select:focus, .sale-form input:focus {
+    border-color: #2196F3;
+  }
+  .sale-form button {
+    align-self: flex-end;
+    padding: 12px 25px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .3s;
+  }
+  .sale-form button:hover { background: #1976D2; }
+  
+  /* Stats Cards */
+  ul.stats {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  ul.stats li {
+    background: white;
+    flex: 1;
+    min-width: 120px;
+    padding: 15px;
+    border-left: 5px solid #2196F3;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  ul.stats li:nth-child(2) { border-color: #FFC107; }
+  ul.stats li:nth-child(3) { border-color: #4CAF50; }
+  
+  /* Lists */
+  .column-right ul {
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  .column-right li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+  }
+  
+  /* Chart Widget */
+  .chart-widget { padding: 0; }
+  .chart-widget canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    main.dashboard-grid { grid-template-columns: 1fr; }
+  }
+  /* ==============================
+   Edit Medicine Page
+   ============================== */
+.edit-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.page-title {
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.edit-form {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.edit-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-form button {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.edit-form button:hover {
+  background-color: #45a049;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #2196F3;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Edit/Delete buttons */
+.btn-edit, .btn-delete {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.btn-edit {
+  background-color: #2196F3;
+  color: white;
+}
+.btn-edit:hover {
+  background-color: #0b7dda;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+.btn-delete:hover {
+  background-color: #d32f2f;
+}
+/* Style for the Add Medicine form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Adjust form width */
+  width: 100%;
+  margin: 20px auto; /* Center form horizontally */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #45a049;
+}
+
+button.btn:active {
+  background-color: #388e3c;
+}
+
+button.btn:disabled {
+  background-color: #b2d8b2;
+  cursor: not-allowed;
+}
+
